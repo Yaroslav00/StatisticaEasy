@@ -3,7 +3,7 @@
 ## Installation
 
 ```
-git clone https://github.com/Yaroslav00/Stats.git
+git clone https://github.com/Yaroslav00/StatisticaEasy.git
 ```
 ```
 source venv/bin/activate
