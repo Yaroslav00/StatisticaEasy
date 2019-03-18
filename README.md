@@ -1,1 +1,1 @@
-# StatisticaEasy
+# Stats
