@@ -15,4 +15,16 @@ export class ApiService {
     return this.http.get(this.baseurl + '/regression_demo_info/',
       {headers: this.httpHeaders});
   }
+  getDemoDnn(): Observable<any> {
+    return this.http.get(this.baseurl + '/dnn_demo_info/',
+      {headers: this.httpHeaders});
+  }
+  getRegression(): Observable<any> {
+    return this.http.get(this.baseurl + '/regression_info/',
+      {headers: this.httpHeaders});
+  }
+  getDnn(): Observable<any> {
+    return this.http.get(this.baseurl + '/dnn_info/',
+      {headers: this.httpHeaders});
+  }
 }

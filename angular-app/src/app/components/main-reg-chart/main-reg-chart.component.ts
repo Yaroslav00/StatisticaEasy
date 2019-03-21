@@ -58,6 +58,7 @@ export class MainRegChartComponent implements OnInit {
     this.api.getDemoRegression().subscribe(
      (data: any[]) => {
            this.info = data;
+           console.log(this.info);
            let chart_reg_x:number[] = this.info[0].chart_reg_x;
             let  chart_reg_y:number[] = this.info[1].chart_reg_y;
             let chart_x:number[]  = this.info[2].chart_x;

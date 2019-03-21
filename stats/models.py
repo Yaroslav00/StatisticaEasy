@@ -13,6 +13,8 @@ class Point(models.Model):
 class DataFile(models.Model):
     file = models.FileField(blank=False, null=False)
 
+    def get_file_name(self):
+        return 'media/'+self.file.name
 
 # class LinearRegresion(models.Model):
 #     alpha = models.FloatField()

@@ -25,7 +25,7 @@ class PointSerializer(serializers.ModelSerializer):
 class FileSerializer(serializers.ModelSerializer):
     class Meta:
         model=DataFile
-        fields = ['file']
+        fields = ['id','file']
 
 
 # class PointGetSerializer(serializers.ModelSerializer):

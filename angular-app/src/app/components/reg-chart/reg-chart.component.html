@@ -27,7 +27,7 @@
     <div class="rounded" id="header" style="background-image:url('/assets/header1.jpeg'); width:90%; height:400px;
     margin-left: 75px;margin-top:0px;text-align:center;padding-top:100px;">
       <h1 style="font-size:8vw;color:rgb(200,200,200)">
-      Statistica <em>Easy</em>
+      Statistics <em>Easy</em>
     </h1>
       <nav class="rounded navbar navbar-expand-lg navbar-dark shadow-lg " style="font-size:1.5vw;height:65px;top:100px;color:white;background-color:rgb(10,10,10);">
 
@@ -45,34 +45,42 @@
         </ul>
 
       </nav>
-    </div>
-    <div style="padding-top:40px;margin-left: 75px;margin-top:30px;text-align:center;width:90%;
+      </div>
+
+      <div style="padding-top:40px;margin-left: 75px;margin-top:30px;text-align:center;width:90%;
     background-color:rgb(250,250,250);">
-     <h1><em>About project</em></h1>
+     <h1><em>Simple regression</em></h1>
      <h3>
     
-      Our site provides essential tools for data analysis, including deep neural networks
+      
      
      </h3>
     <hr>
-    <h1>Examples</h1>
-    <h4><em>Prediction of the time series with DNN</em></h4>
-    <app-main-dnn-chart></app-main-dnn-chart>
 
-    <button class="btn btn-dark btn-lg" ><h1 style="font-size:2vw">Start using DNN!</h1></button>
-    <hr>
-    <h4><em>Building of simple regression</em></h4>
-    <app-main-reg-chart></app-main-reg-chart>
-    <button class="btn btn-dark btn-lg" ><h1 style="font-size:2vw">Build regression right now!</h1></button>
-    <hr>
-    </div>
+
+
+    <input  ng2FileSelect type="file" accept=".csv" [uploader]="uploader" (click)="upload()"/>
+    <button class ="btn btn-dark margin-10px" style="margin-left:10px;" (click)="getReg()">Build!</button>
+
+    <button class ="btn btn-dark" (click)="predict()">Predict</button>
+    <highcharts-chart 
+      [Highcharts]="Highcharts"
+      [options]="chartOptions"
+      [update]="updateFlag"
+      style="width: 100%; height: 400px; display: block;">
+      </highcharts-chart>
+        </div>
+        </div>
+    
+
+    
 
    
 
     
 
   
-</div>
+
 
 
 
