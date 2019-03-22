@@ -1,6 +1,6 @@
 from django.urls import include, path
 from rest_framework import routers
-from stats.views import main_page, info_demo_regression, regression_info, dnn_demo_info, dnn_info
+from .views import main_page, info_demo_regression, regression_info, dnn_demo_info, dnn_info
 
 urlpatterns = [
     path('', main_page.as_view(), name='main_page'),

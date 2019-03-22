@@ -32,7 +32,7 @@ class regression_info(APIView):
         alpha,beta = simple_linear_regretion.least_squers_fit(x,y)
         chart_reg_y = [beta*point + alpha for point in x]
         chart_reg_x = [point for point in x]
-        file.delete()
+       
         return Response([{'chart_reg_x':chart_reg_x},{'chart_reg_y':chart_reg_y},{'chart_x':x},{'chart_y':y}])
 
     
@@ -125,6 +125,6 @@ class dnn_info(APIView):
         np_y = np.array([[*y]])
         np_x = x
         chart_dnn_x, chart_dnn_y = neural_network_prediction.dnn_prediction(np_x, np_y)
-        file.delete()
+        
         return Response([{'chart_dnn_x': chart_dnn_x}, {'chart_dnn_y': chart_dnn_y}, {'chart_x': x}, {'chart_y': y}])
 
